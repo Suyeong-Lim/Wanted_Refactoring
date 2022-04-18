@@ -1,5 +1,13 @@
+import MainPages from 'pages/MainPages';
+import GlobalStyles from 'styles/GlobalStyles';
+
 function App() {
-  return <div className="App"></div>;
+    return (
+        <>
+            <GlobalStyles />
+            <MainPages />
+        </>
+    );
 }
 
 export default App;

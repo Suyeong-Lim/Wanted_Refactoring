@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+## 📚 구현 과제 : 팀원들과 함께 구현했던 프로젝트를 혼자서 리팩토링 & 다시 구현 해보기. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📌 주요 기능 : 필터링 기능
 
-## Available Scripts
+## ✅ 구현 사항
 
-In the project directory, you can run:
+-   [ ] 헤더
+-   [ ] json-server 사용
+    -   [ ] concurrently 라이브러리 사용해 json-server와 react 동시 실행
+-   [ ] 견적 요청 카드
+    -   [ ] 프로젝트 명
+    -   [ ] 요청한 고객사
+    -   [ ] 고객의 희망 납기일
+    -   [ ] 요청한 도면 개수
+    -   [ ] 요청한 제품 총 수량
+    -   [ ] 가공 방식: 도면 별로 밀링, 선반 중 한 가지 방식 선택
+    -   [ ] 재료: 도면 별로 한 가지 재료 선택
+        -   [ ] ❗️ **재료 필터의 합금강을 스테인리스강으로 수정**
+    -   [ ] 카드 전체 영역에 마우스 hover시 보더 스타일
+-   [ ] 필터링
+    -   [ ] 가공 방식 필터가 선택되면 해당 방식 조건이 포함된 카드 모두 노출
+    -   [ ] 재료 필터 선택되면 해당 재료 조건 포함된 카드 모두 노출
+        - 각 필터의 옵션은 복수선택이 가능하게 구현
+        - 사용자가 어떤 옵션을 선택할지는 예상할 수 없으며,
+        - 복수선택은 적은 노력으로 사용자의 선택 편의성을 향상 시킬 수 있기때문 
+    -   [ ] 가공 방식과 재료 필터가 둘 다 선택되면 교집합 노출
+    -   [ ] 필터링 리셋 누르면 전체 필터 선택 해제
+-   [ ] 토글
+    -   [ ] 상담 중인 요청만 보기 토글 활성화하면 상담 중 뱃지가 달린 카드만 노출
+-   [ ] 빈 화면일 때 '조건에 맞는 견적 요청이 없습니다.' 문구 출력
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   [ ] 반응형 구현
+    -   [ ] 햄버거 메뉴 아이콘 탭하면
+        -   [ ] 백그라운드 #000000 50%
+        -   [ ] 메뉴 화면이 왼쪽에서 들어옴
+    -   [ ] 백그라운드 영역 탭하면 메뉴 close
