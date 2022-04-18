@@ -2,10 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import breakpoints from 'styles/breakpoints';
 import media from 'styles/media';
+import Header from 'components/Header';
 
 const MainPages = () => {
     return (
         <MainContainer>
+            <Header />
             <MainLayout>gg</MainLayout>
         </MainContainer>
     );
