@@ -1,11 +1,15 @@
 import MainPages from 'pages/MainPages';
+import { ThemeProvider } from 'styled-components';
 import GlobalStyles from 'styles/GlobalStyles';
+import theme from 'styles/theme';
 
 function App() {
     return (
         <>
-            <GlobalStyles />
-            <MainPages />
+            <ThemeProvider theme={theme}>
+                <GlobalStyles />
+                <MainPages />
+            </ThemeProvider>
         </>
     );
 }
