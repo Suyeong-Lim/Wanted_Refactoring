@@ -7,6 +7,8 @@ import CardContainer from './CardContainer';
 
 const RequestContents = () => {
     const [data, setData] = useState([]);
+    const [isToggled, setIsToggled] = useState(false);
+
     useEffect(() => {
         const getData = async () => {
             const json = await (
@@ -17,15 +19,21 @@ const RequestContents = () => {
         };
         getData();
     }, []);
-    console.log(data);
+
+    const filteredData =
+        data && isToggled
+            ? data.filter((item) => item.status === '상담중')
+            : data;
+    if (filteredData === null || data === null) return <div>로딩중</div>;
+
     return (
         <>
             <Title />
             <FilterBlock>
                 <FilterBox />
-                <ToggleBox />
+                <ToggleBox isToggled={isToggled} setIsToggled={setIsToggled} />
             </FilterBlock>
-            <CardContainer />
+            <CardContainer cardData={filteredData} />
         </>
     );
 };

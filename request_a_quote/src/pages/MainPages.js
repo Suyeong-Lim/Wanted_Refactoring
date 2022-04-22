@@ -3,12 +3,15 @@ import styled from 'styled-components';
 import breakpoints from 'styles/breakpoints';
 import media from 'styles/media';
 import Header from 'components/Header';
+import RequestContents from 'components/RequestContents';
 
 const MainPages = () => {
     return (
         <MainContainer>
             <Header />
-            <MainLayout>gg</MainLayout>
+            <MainLayout>
+                <RequestContents />
+            </MainLayout>
         </MainContainer>
     );
 };
@@ -26,7 +29,7 @@ const MainLayout = styled.div`
     background-color: #fff;
 
     ${media.large} {
-        background-color: #cccc9a;
+        background-color: #fff;
         width: ${breakpoints.medium}px;
     }
     ${media.medium} {
