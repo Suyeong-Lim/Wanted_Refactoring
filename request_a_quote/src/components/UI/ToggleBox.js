@@ -5,9 +5,7 @@ const ToggleBox = ({ isToggled, setIsToggled }) => {
     const checkingRef = useRef(false);
 
     const changeHandler = () => {
-        console.log('clicked');
         const isChecked = !checkingRef.current.checked;
-        console.log(isChecked);
         setIsToggled(isChecked);
     };
     return (

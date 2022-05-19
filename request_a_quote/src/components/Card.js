@@ -24,6 +24,7 @@ const Card = ({ data }) => {
                 <Button variant="secondary" width="76px">
                     채팅하기
                 </Button>
+                {status === '상담중' && <Badge>{status}</Badge>}
             </ButtonGroup>
         </Container>
     );
@@ -57,6 +58,18 @@ const ButtonGroup = styled.div`
     button {
         padding: 0;
     }
+`;
+
+const Badge = styled.div`
+    position: absolute;
+    top: 24px;
+    right: 16px;
+    border: 1px solid ${({ theme }) => theme.colors.warning};
+    box-sizing: border-box;
+    border-radius: 12px;
+    color: ${({ theme }) => theme.colors.warning};
+    font-size: 12px;
+    padding: 2px 8px;
 `;
 
 export default Card;
