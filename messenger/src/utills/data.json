@@ -1,0 +1,44 @@
+{
+  "messages": [
+    {
+      "userId": 1010,
+      "userName": "채원",
+      "profileImage": "https://i.ibb.co/LNw3QCV/image.png",
+      "date": "2022-05-20 12:20:35",
+      "content": "좋은 아침!?",
+      "status": "true"
+    },
+    {
+      "userId": 2,
+      "userName": "재현",
+      "profileImage": "https://i.ibb.co/DLRDn7h/image.png",
+      "date": "2022-05-20 12:20:35",
+      "content": "일은 다 하셨나요",
+      "status": "true"
+    },
+    {
+      "userId": 3,
+      "userName": "유진",
+      "profileImage": "https://i.ibb.co/Hx4RLy8/image.png",
+      "date": "2022-05-20 13:20:35",
+      "content": "오늘 일이 많네요.",
+      "status": "true"
+    },
+    {
+      "userId": 4,
+      "userName": "세현",
+      "profileImage": "https://i.ibb.co/LNw3QCV/image.png",
+      "date": "2022-05-20 14:20:35",
+      "content": "으음!",
+      "status": "true"
+    },
+    {
+      "userId": 5,
+      "userName": "수영",
+      "profileImage": "https://i.ibb.co/DLRDn7h/image.png",
+      "date": "2022-05-20 15:20:35",
+      "content": "힘내봐요~",
+      "status": "true"
+    }
+  ]
+}
