@@ -1,15 +1,13 @@
 import React, { useState } from "react";
-import MockMessages from "../../utills/data.json";
+import MockMessages from "../../../utills/data.json";
+import useInput from "./useInput";
 
 export default function useMessenger() {
   const defaultMessage = MockMessages.messages;
   const [messages, setMessages] = useState(defaultMessage);
   const [message, setMessage] = useState("");
 
-  const onChangeMessage = (e) => {
-    const inputTxt = e.target.value;
-    setMessage(inputTxt);
-  };
+  const [content, onChangeMessage, setValue] = useInput("");
 
   const onSubmitMessage = (e) => {
     e.preventDefault();
@@ -28,9 +26,19 @@ export default function useMessenger() {
     setMessage("");
   };
 
+  const onKeyPress = (e) => {
+    const keyCode = e.key;
+    if (keyCode === "Enter") {
+      onSubmitMessage();
+    }
+  };
+
   return {
+    content,
+    message,
     messages,
     onChangeMessage,
     onSubmitMessage,
+    onKeyPress,
   };
 }
