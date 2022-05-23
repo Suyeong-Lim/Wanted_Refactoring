@@ -7,5 +7,5 @@ export default function useInput() {
     const inputValue = e.target.value;
     setValue(inputValue);
   }, []);
-  return [value, onChangeMessage];
+  return [value, onChangeMessage, setValue];
 }

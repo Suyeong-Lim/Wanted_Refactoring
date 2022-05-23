@@ -1,15 +1,20 @@
 import React, { useState } from "react";
 
-const MessageInput = ({ ChangeMessage, content, onKeyPress }) => {
+const MessageInput = ({
+  ChangeMessage,
+  content,
+  onKeyPress,
+  onSendMessage,
+}) => {
   return (
     <div>
-      <form>
+      <form onSubmit={(e) => e.preventDefault()}>
         <textarea
           onKeyPress={onKeyPress}
           onChange={ChangeMessage}
           value={content}
         />
-        <button>전송</button>
+        <button onClick={onSendMessage}>전송</button>
       </form>
     </div>
   );

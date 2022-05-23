@@ -10,12 +10,14 @@ const ChatRoom = () => {
   const user = useSelector(userSelector);
   const isMyMess = (userId) => userId === user.userId;
 
-  const { content, onChangeMessage, onKeyPress } = useMessenger();
+  const { messages, content, onChangeMessage, onKeyPress, onSendMessage } =
+    useMessenger();
 
   return (
     <div>
-      <MessengerContainer />
+      <MessengerContainer messages={messages} />
       <MessageInput
+        onSendMessage={onSendMessage}
         ChangeMessage={onChangeMessage}
         content={content}
         onKeyPress={onKeyPress}
